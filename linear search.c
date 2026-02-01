@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int a[100], search, i, n;
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    scanf("%d", &search);
+    for (i = 0; i < n; i++) {
+        if (a[i] == search) {
+            printf("%d is present at location %d.\n", search, i + 1);
+            break;
+        }
+    }
+    if (i == n)
+        printf("%d is not present in array.\n", search);
+    return 0;
+}
